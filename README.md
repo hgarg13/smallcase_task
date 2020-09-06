@@ -4,7 +4,7 @@ A portfolio tracking app which allows you to add, update, delete trades, maintai
 Portfolio is a grouping of financial assets such as stocks, bonds, commodities, currencies and cash equivalents, as well as their fund counterparts, including mutual,
 exchange-traded and closed funds.
 
-[Demo hosted on AWS](https://breakdance.github.io/breakdance/)
+[Demo hosted on Heroku](https://smallcase-trading-portfolio.herokuapp.com/)
 
 ## Tech
 
@@ -33,7 +33,7 @@ $ npm start
 Add a trade to the portfolio for a given security, and update the portfolio. Trade could be of type BUY (1) or SELL(2).
 For making a trade input params should be security(or ticker symbol), action (BUY or SELL), shares(or quantity), price(only in case of buy trade)
 
-**URL** : `/trade`
+**URL** : `https://smallcase-trading-portfolio.herokuapp.com/trade`
 
 **Method** : `POST`
 
@@ -59,7 +59,7 @@ Add a BUY(1) trade for security TCS with an average buy price of 1833.45 for a q
 
 Update a trade that was already made for a given security and action, and update the portfolio. Trade updation can only update the quantity and/or the price. If the security or action is to be modified in that case remove previously made trade and add a new trade.
 
-**URL** : `/trade/:id`
+**URL** : `https://smallcase-trading-portfolio.herokuapp.com/trade/:id`
 
 **Method** : `PUT`
 **Body** : {shares, price(in case of buy trade)}
@@ -89,7 +89,7 @@ Trade updation can only update the quantity and/or the price because of the give
 
 Remove a trade that was already made for a given security, and update the portfolio.
 
-**URL** : `/trade/:id`
+**URL** : `https://smallcase-trading-portfolio.herokuapp.com/trade/:id`
 
 **Method** : `DELETE`
 
@@ -107,7 +107,7 @@ Remove a trade with an id of `5f53c89c470bcb5af044ea0a`.
 
 It returns all the securities and trades corresponding to it.
 
-**URL** : `/portfolio`
+**URL** : `https://smallcase-trading-portfolio.herokuapp.com/portfolio`
 
 **Method** : `GET`
 
@@ -142,7 +142,7 @@ It returns all the securities and trades corresponding to it.
 
 It returns an aggregate view of all securities in the portfolio with its final quantity and average buy price.
 
-**URL** : `/holdings`
+**URL** : `https://smallcase-trading-portfolio.herokuapp.com/holdings`
 
 **Method** : `GET`
 
@@ -188,7 +188,7 @@ It returns an aggregate view of all securities in the portfolio with its final q
 
 It returns cumulative returns at any point of time of a particular portfolio.
 
-**URL** : `/returns`
+**URL** : `https://smallcase-trading-portfolio.herokuapp.com/returns`
 
 **Method** : `GET`
 
